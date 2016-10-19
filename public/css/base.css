@@ -1,0 +1,132 @@
+body {
+  background: #fff;
+  font-family: "Dosis", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+  
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 15px;
+}
+
+h2 {
+  border-bottom: 1px solid #eee;
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p, ul {
+  margin: 15px 0;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+  text-align: center;
+  text-transform: uppercase;
+  background: #f4ee42;
+}
+
+.positonsContainer {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    background: #efefef;
+    padding-bottom: 40px;
+}
+
+.og.positonsContainer {
+  border-right: 1px solid #fefefe;
+  border-bottom: 1px solid #fefefe;
+}
+.cg.positonsContainer {
+  border-right: 1px solid #fefefe;
+}
+
+.submit-button {
+    background-color: #cb202d;
+    color: #fefefe;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transform: translateX(-50%);
+    width: 30%;
+    left: 50%;
+    margin-top: 20px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+  display: block;
+  font-family: 'Dosis';
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  position: relative;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+.positonsContainer input[type="text"] {
+  padding: 10px;
+  border: solid 5px #c9c9c9;
+  transition: border 0.3s;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+.positonsContainer input[type="text"]:focus,
+.positonsContainer input[type="text"].focus {
+  border: solid 5px #969696;
+}
+
+input[type="text"]:disabled {
+    background: #f4ee42;
+}
+
+.disabled.submit-button {
+    background-color: #2d2d2d;
+    opacity: 0.65;
+    cursor: not-allowed;
