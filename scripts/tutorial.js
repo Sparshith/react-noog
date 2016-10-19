@@ -22,7 +22,8 @@ class PositionsBox extends React.Component{
     }
     handleChangeFromInput(id) {
         var val = document.getElementById(id).value;
-        this.setState({positions: {[id]: val}});
+        this.state.positions[id] = val;
+        this.forceUpdate();
     }
     render() {
         return <div className="positionsBox">
@@ -42,19 +43,17 @@ class Position extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.state = {value: this.props.value};
     }
-    handleChange(event) {
-        this.refs.myInput = event.target.value;
-        this.props.handleChange(event.target.value);
-
+    handleChange() {
+        this.props.handleChange();
+        
     }
-
     render() {
         let cssId = this.props.id;
         let cssClasses = `${cssId} positonsContainer `;
         let isdisabled = this.props.shuffled ? "disabled" : false;
         return <div className={cssClasses}> 
                     <h1> {this.props.name} </h1>
-                    <input id={this.props.id} ref={this.props.id} type="text" disabled={isdisabled} value={this.props.value} onChange={this.handleChange} className="team"/>
+                    <input id={this.props.id} type="text" disabled={isdisabled} value={this.props.value} onChange={this.handleChange} className="team"/>
                 </div>
     }
 }
@@ -81,5 +80,3 @@ ReactDOM.render(
     <PositionsBox/>,
     document.getElementById('content')
 );
-
-console.log("here");
