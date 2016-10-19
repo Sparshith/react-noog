@@ -140,6 +140,13 @@ input[type="text"]:disabled {
 
 
   .positonsContainer input[type="text"] {
-     padding: 5px;
+    padding: 5px 0px;
+    border: solid 2px #c9c9c9;
+    font-size: 15px;
+  }
+
+  .positonsContainer input[type="text"]:focus,
+  .positonsContainer input[type="text"].focus {
+    border: solid 2px #969696;
   }
 }
